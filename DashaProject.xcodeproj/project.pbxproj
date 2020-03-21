@@ -7,23 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5427A324266C5A00B1273B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A224266C5A00B1273B /* TasksViewController.swift */; };
+		5B5427A824266D3800B1273B /* AvailableTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */; };
+		5B5427AA24266E1300B1273B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A924266E1300B1273B /* MapViewController.swift */; };
+		5B5427AD24266F9F00B1273B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427AC24266F9F00B1273B /* Task.swift */; };
+		5B5427B02426701F00B1273B /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427AF2426701F00B1273B /* TaskTableViewCell.swift */; };
+		5B5427B32426710800B1273B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427B22426710800B1273B /* UIStackView+Extension.swift */; };
+		5B5427B7242673E900B1273B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427B6242673E900B1273B /* NetworkManager.swift */; };
+		5B5427BA242674FB00B1273B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427B9242674FB00B1273B /* AuthViewController.swift */; };
+		5B5427BC2426756A00B1273B /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427BB2426756A00B1273B /* OneLineTextField.swift */; };
+		5B5427BE2426758300B1273B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427BD2426758300B1273B /* UIColor+Extension.swift */; };
+		5B5427C02426773300B1273B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427BF2426773300B1273B /* UIButton+Extension.swift */; };
+		5B5427C22426775800B1273B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C12426775800B1273B /* UIFont+Extension.swift */; };
+		5B5427C42426780C00B1273B /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C32426780C00B1273B /* UILabel+Extension.swift */; };
+		5B5427C62426785900B1273B /* TextFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C52426785900B1273B /* TextFieldFormView.swift */; };
 		5BE721E924261988007B1250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721E824261988007B1250 /* AppDelegate.swift */; };
 		5BE721EB24261988007B1250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721EA24261988007B1250 /* SceneDelegate.swift */; };
-		5BE721ED24261988007B1250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721EC24261988007B1250 /* ViewController.swift */; };
-		5BE721F024261988007B1250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE721EE24261988007B1250 /* Main.storyboard */; };
+		5BE721ED24261988007B1250 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721EC24261988007B1250 /* MainTabBarController.swift */; };
 		5BE721F224261989007B1250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE721F124261989007B1250 /* Assets.xcassets */; };
-		5BE721F524261989007B1250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE721F324261989007B1250 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B5427A224266C5A00B1273B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTasksViewController.swift; sourceTree = "<group>"; };
+		5B5427A924266E1300B1273B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5B5427AC24266F9F00B1273B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5B5427AF2426701F00B1273B /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		5B5427B22426710800B1273B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		5B5427B6242673E900B1273B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5B5427B9242674FB00B1273B /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		5B5427BB2426756A00B1273B /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		5B5427BD2426758300B1273B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5B5427BF2426773300B1273B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		5B5427C12426775800B1273B /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		5B5427C32426780C00B1273B /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		5B5427C52426785900B1273B /* TextFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormView.swift; sourceTree = "<group>"; };
 		5BE721E524261988007B1250 /* DashaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE721E824261988007B1250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE721EA24261988007B1250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BE721EC24261988007B1250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BE721EF24261988007B1250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BE721EC24261988007B1250 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5BE721F124261989007B1250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BE721F424261989007B1250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE721F624261989007B1250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE721FD24261B8A007B1250 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = "HERESDK-Premium/framework/NMAKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,11 +62,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B5427A424266C5E00B1273B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427B8242674E700B1273B /* Auth */,
+				5BE721EC24261988007B1250 /* MainTabBarController.swift */,
+				5B5427A224266C5A00B1273B /* TasksViewController.swift */,
+				5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */,
+				5B5427A924266E1300B1273B /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B5427A524266C6B00B1273B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BE721F124261989007B1250 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B5427A624266C7300B1273B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BE721E824261988007B1250 /* AppDelegate.swift */,
+				5BE721EA24261988007B1250 /* SceneDelegate.swift */,
+				5BE721F624261989007B1250 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5B5427AB24266F9200B1273B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427AC24266F9F00B1273B /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B5427AE2426701200B1273B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427C72426786400B1273B /* Cells */,
+				5B5427BB2426756A00B1273B /* OneLineTextField.swift */,
+				5B5427C52426785900B1273B /* TextFieldFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B5427B1242670EE00B1273B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427BF2426773300B1273B /* UIButton+Extension.swift */,
+				5B5427BD2426758300B1273B /* UIColor+Extension.swift */,
+				5B5427C12426775800B1273B /* UIFont+Extension.swift */,
+				5B5427C32426780C00B1273B /* UILabel+Extension.swift */,
+				5B5427B22426710800B1273B /* UIStackView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B5427B4242673CF00B1273B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427B6242673E900B1273B /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5B5427B8242674E700B1273B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427B9242674FB00B1273B /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5B5427C72426786400B1273B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B5427AF2426701F00B1273B /* TaskTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		5BE721DC24261988007B1250 = {
 			isa = PBXGroup;
 			children = (
 				5BE721E724261988007B1250 /* DashaProject */,
 				5BE721E624261988007B1250 /* Products */,
+				5BE721FC24261B8A007B1250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +166,23 @@
 		5BE721E724261988007B1250 /* DashaProject */ = {
 			isa = PBXGroup;
 			children = (
-				5BE721E824261988007B1250 /* AppDelegate.swift */,
-				5BE721EA24261988007B1250 /* SceneDelegate.swift */,
-				5BE721EC24261988007B1250 /* ViewController.swift */,
-				5BE721EE24261988007B1250 /* Main.storyboard */,
-				5BE721F124261989007B1250 /* Assets.xcassets */,
-				5BE721F324261989007B1250 /* LaunchScreen.storyboard */,
-				5BE721F624261989007B1250 /* Info.plist */,
+				5B5427A624266C7300B1273B /* App */,
+				5B5427A424266C5E00B1273B /* Controllers */,
+				5B5427B1242670EE00B1273B /* Extensions */,
+				5B5427B4242673CF00B1273B /* Managers */,
+				5B5427AB24266F9200B1273B /* Models */,
+				5B5427A524266C6B00B1273B /* Resources */,
+				5B5427AE2426701200B1273B /* Views */,
 			);
 			path = DashaProject;
+			sourceTree = "<group>";
+		};
+		5BE721FC24261B8A007B1250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BE721FD24261B8A007B1250 /* NMAKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE721F524261989007B1250 /* LaunchScreen.storyboard in Resources */,
 				5BE721F224261989007B1250 /* Assets.xcassets in Resources */,
-				5BE721F024261988007B1250 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +254,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE721ED24261988007B1250 /* ViewController.swift in Sources */,
+				5B5427BC2426756A00B1273B /* OneLineTextField.swift in Sources */,
+				5B5427BA242674FB00B1273B /* AuthViewController.swift in Sources */,
+				5B5427C62426785900B1273B /* TextFieldFormView.swift in Sources */,
+				5B5427B02426701F00B1273B /* TaskTableViewCell.swift in Sources */,
+				5B5427C22426775800B1273B /* UIFont+Extension.swift in Sources */,
+				5B5427A824266D3800B1273B /* AvailableTasksViewController.swift in Sources */,
+				5B5427B7242673E900B1273B /* NetworkManager.swift in Sources */,
+				5B5427AA24266E1300B1273B /* MapViewController.swift in Sources */,
+				5BE721ED24261988007B1250 /* MainTabBarController.swift in Sources */,
+				5B5427C42426780C00B1273B /* UILabel+Extension.swift in Sources */,
+				5B5427A324266C5A00B1273B /* TasksViewController.swift in Sources */,
+				5B5427B32426710800B1273B /* UIStackView+Extension.swift in Sources */,
 				5BE721E924261988007B1250 /* AppDelegate.swift in Sources */,
+				5B5427BE2426758300B1273B /* UIColor+Extension.swift in Sources */,
+				5B5427AD24266F9F00B1273B /* Task.swift in Sources */,
 				5BE721EB24261988007B1250 /* SceneDelegate.swift in Sources */,
+				5B5427C02426773300B1273B /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5BE721EE24261988007B1250 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BE721EF24261988007B1250 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BE721F324261989007B1250 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BE721F424261989007B1250 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5BE721F724261989007B1250 /* Debug */ = {
@@ -284,9 +395,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
-				INFOPLIST_FILE = DashaProject/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/DashaProject/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkashin.DashaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,9 +418,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73A856J95H;
-				INFOPLIST_FILE = DashaProject/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/DashaProject/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkashin.DashaProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
