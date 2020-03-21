@@ -11,7 +11,7 @@ import UIKit
 class AuthViewController: UIViewController {
     
     let phoneLabel = UILabel(text: "Введите ваш номер", font: .avenir20())
-    let phoneTextField = OneLineTextField(font: .avenir20())
+    let phoneNumberTextField = OneLineTextField(font: .avenir20())
     let loginButton = UIButton(title: "Войти", backgroundColor: .buttonDark(), titleColor: .white, isShadow: false)
     
     override func viewDidLoad() {
@@ -19,11 +19,24 @@ class AuthViewController: UIViewController {
         
         view.backgroundColor = .white
         setupConstraints()
-
+        
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
-//        present(loginVC, animated: true)
+        guard let phoneNumberString = phoneNumberTextField.text else { return }
+        guard let phoneNumber = Int(phoneNumberString) else { return }
+        NetworkManager.shared.login(phoneNumber: phoneNumber) { tasks in
+            DispatchQueue.main.async {
+                let mainTabBar = MainTabBarController(phoneNumber: phoneNumber, tasks: tasks)
+                mainTabBar.modalPresentationStyle = .fullScreen
+                self.present(mainTabBar, animated: true)
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
 
@@ -31,7 +44,8 @@ class AuthViewController: UIViewController {
 extension AuthViewController {
     private func setupConstraints() {
         
-        let phoneView = TextFieldFormView(label: phoneLabel, textField: phoneTextField)
+        phoneNumberTextField.keyboardType = .numberPad
+        let phoneView = TextFieldFormView(label: phoneLabel, textField: phoneNumberTextField)
         
         let stackView = UIStackView(arrangedSubviews: [phoneView], axis: .vertical, spacing: 40)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +56,14 @@ extension AuthViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+        ])
+        
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loginButton)
+        NSLayoutConstraint.activate([
+            loginButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginButton.widthAnchor.constraint(equalToConstant: 200),
         ])
     }
 }

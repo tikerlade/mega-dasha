@@ -56,14 +56,14 @@ extension TaskTableViewCell {
     }
     
     func setupUI(with task: Task) {
-//        nameLabel.text = queue.name
-//        extraInfoLabel.text = queue.description
+        nameLabel.text = task.name
+        categoryLabel.text = task.category
 //        peopleCountLabel.text = "Участники: \(queue.people.count)"
-//        
+        
 //        let dateFormatter = DateFormatter()
 //        let dateTime = dateFormatter.getString(from: queue.startDate).split(separator: " ")
 //        dateLabel.text = "\(dateTime.first!)\n\(dateTime.last!)"
-//        
+        
 //        imageView?.image = queue.isOwnCreated ? #imageLiteral(resourceName: "crown") : #imageLiteral(resourceName: "circle")
     }
 }

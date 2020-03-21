@@ -1,30 +1,21 @@
 //
-//  Task.swift
+//  TaskData.swift
 //  DashaProject
 //
-//  Created by Георгий Кашин on 21.03.2020.
+//  Created by Георгий Кашин on 22.03.2020.
 //  Copyright © 2020 Georgii Kashin. All rights reserved.
 //
 
 import Foundation
 
-class Task: Codable {
-    
-    init(name: String, category: String) {
-        self.name = name
-        self.category = category
-    }
-    
+class TaskData: Codable {
+    var phoneNumber = Int()
     var name = String()
-    var phone = Int()
     var category = String()
     
     enum CodingKeys: String, CodingKey {
+        case phoneNumber = "phone"
         case name = "description"
         case category = "category"
     }
-}
-
-class Tasks: Codable {
-    var tasks: [Task]
 }

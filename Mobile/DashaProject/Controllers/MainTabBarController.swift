@@ -10,21 +10,21 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-//    private let currentUser: MUser
+    let tasksViewController: TasksViewController!
+    let availableTasksViewController: AvailableTasksViewController!
+    let mapViewController: MapViewController!
     
-//    init(currentUser: MUser = MUser(id: "",
-//                                    email: "",
-//                                    username: "",
-//                                    imageName: "",
-//                                    description: "",
-//                                    sex: "")) {
-//        self.currentUser = currentUser
-//        super.init(nibName: nil, bundle: nil)
-//    }
-    
-    init() {
+    init(phoneNumber: Int = Int(), tasks: [Task]? = nil) {
+        tasksViewController = TasksViewController(phoneNumber: phoneNumber, tasks: tasks)
+        availableTasksViewController = AvailableTasksViewController()
+        mapViewController = MapViewController()
+        
         super.init(nibName: nil, bundle: nil)
     }
+    
+//    init() {
+//        super.init(nibName: nil, bundle: nil)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -33,9 +33,10 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tasksViewController = TasksViewController()
-        let availableTasksViewController = AvailableTasksViewController()
-        let mapViewController = MapViewController()
+        
+//        let tasksViewController = TasksViewController(tasks: tasks)
+//        let availableTasksViewController = AvailableTasksViewController()
+//        let mapViewController = MapViewController()
         
         tabBar.tintColor = #colorLiteral(red: 0.5568627451, green: 0.3529411765, blue: 0.968627451, alpha: 1)
         
