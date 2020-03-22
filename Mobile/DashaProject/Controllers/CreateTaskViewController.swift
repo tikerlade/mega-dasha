@@ -11,12 +11,24 @@ import UIKit
 class CreateTaskViewController: UIViewController {
     
     var completionHandler: ((Task) -> Void)?
+    let categories = ["Рестораны", "Кафе", "Фаст-Фуд", "Развлечения", "Достопримечательности", "Транспорт", "Аэропорт", "Проживание", "Шоппинг", "Активный Отдых", "Учреждения", "Природа", "Заправки", "Банкоматы", "Туалеты", "Больницы"]
     
-    let titleLabel = UILabel(text: "Добавить задачу")
-    let nameLabel = UILabel(text: "Название")
-    let categoryLabel = UILabel(text: "Категория")
+    let titleLabel = UILabel(text: "Добавьте задачу", font: .avenir26())
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Название"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
+    let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Выберите категорию"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
     let nameTextField = OneLineTextField(font: .avenir20())
     let categoryTextField = OneLineTextField(font: .avenir20())
+    let pickerView = UIPickerView()
     
 //    let setCurrentDateLabel = UILabel(text: "Использовать текущую дату?", font: .avenir16())
 //    let setCurrentDateSwitch = UISwitch()
@@ -38,11 +50,13 @@ class CreateTaskViewController: UIViewController {
         
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
         
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        view.frame.origin.y = 0 - keyboardSize.height
+        view.frame.origin.y = 0 - keyboardSize.height + 60
     }
     
     @objc func keyboardWillHide() {
@@ -58,20 +72,11 @@ class CreateTaskViewController: UIViewController {
                 return
         }
         
-        let task = Task(name: name, category: category)
+        let task = Task(name: name, phoneNumber: TasksViewController.phoneNumber, category: category)
 
         self.completionHandler?(task)
         dismiss(animated: true)
     }
-
-//    @objc private func setCurrentDateSwitchTapped() {
-//        if setCurrentDateSwitch.isOn {
-//            let dateFormatter = DateFormatter()
-//            startDateTextField.text = dateFormatter.getString(from: Date())
-//        } else {
-//            startDateTextField.text = ""
-//        }
-//    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -81,65 +86,63 @@ class CreateTaskViewController: UIViewController {
 // MARK: - UI
 extension CreateTaskViewController {
     private func setupUI() {
+        nameTextField.placeholder = "Название"
+        categoryTextField.placeholder = "Категория"
         let nameTextFieldFormView = TextFieldFormView(label: nameLabel, textField: nameTextField)
-        let descriptionTextFieldFormView = TextFieldFormView(label: categoryLabel, textField: categoryTextField)
-//        let startDateTextFieldFormView = TextFieldFormView(label: startDateLabel, textField: startDateTextField)
+        let categoryTextFieldFormView = TextFieldFormView(label: categoryLabel, textField: categoryTextField)
         
-//        let datePicker = UIDatePicker()
-//        datePicker.datePickerMode = .dateAndTime
-//        datePicker.backgroundColor = .white
-//        datePicker.minimumDate = Date()
-//        datePicker.addTarget(self, action: #selector(handleDatePicker), for: .valueChanged)
-//
-//        startDateTextField.inputView = datePicker
+        pickerView.backgroundColor = .white
+        categoryTextField.inputView = pickerView
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
-        let stackView = UIStackView(arrangedSubviews: [nameTextFieldFormView, descriptionTextFieldFormView], axis: .vertical, spacing: 0)
+        let stackView = UIStackView(arrangedSubviews: [nameTextFieldFormView, categoryTextFieldFormView], axis: .vertical, spacing: 30)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         view.addSubview(createButton)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
+            stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
 //            stackView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: 0),
         ])
-        
-//        setCurrentDateLabel.translatesAutoresizingMaskIntoConstraints = false
-//        setCurrentDateSwitch.translatesAutoresizingMaskIntoConstraints = false
-        
-//        view.addSubview(setCurrentDateLabel)
-//        view.addSubview(setCurrentDateSwitch)
-        
-//        NSLayoutConstraint.activate([
-//            setCurrentDateLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-//            setCurrentDateLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 0),
-//            setCurrentDateSwitch.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-//            setCurrentDateSwitch.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 0)
-//        ])
-        
+    
         createButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            createButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            createButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
             createButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            createButton.widthAnchor.constraint(equalToConstant: 200)
+            createButton.widthAnchor.constraint(equalToConstant: 230),
+            createButton.heightAnchor.constraint(equalToConstant: 56),
         ])
     }
+}
+
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+extension CreateTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categories[row]
+    }
     
-//    @objc private func handleDatePicker(sender: UIDatePicker) {
-//        let dateFormatter = DateFormatter()
-//        startDateTextField.text = dateFormatter.getString(from: sender.date)
-//    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        categoryTextField.text = categories[row]
+    }
 }
 
 // MARK: - SwiftUI

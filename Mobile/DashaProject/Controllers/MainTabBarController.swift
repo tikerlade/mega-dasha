@@ -11,13 +11,14 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     let tasksViewController: TasksViewController!
-    let availableTasksViewController: AvailableTasksViewController!
     let mapViewController: MapViewController!
+    let trackingLocation: TrackingLocation!
     
-    init(phoneNumber: Int = Int(), tasks: [Task]? = nil) {
-        tasksViewController = TasksViewController(phoneNumber: phoneNumber, tasks: tasks)
-        availableTasksViewController = AvailableTasksViewController()
+    init(friendPhoneNumber: Int? = Int(), tasks: [Task]? = nil) {
+        
+        tasksViewController = TasksViewController(friendPhoneNumber: friendPhoneNumber, tasks: tasks)
         mapViewController = MapViewController()
+        trackingLocation = TrackingLocation()
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -42,13 +43,12 @@ class MainTabBarController: UITabBarController {
         
         let boldConfig = UIImage.SymbolConfiguration(weight: .medium)
          
-        let peopleImage = UIImage(systemName: "person.2", withConfiguration: boldConfig)!
-        let conversationImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfig)!
+        let tasksImage = UIImage(systemName: "list.bullet", withConfiguration: boldConfig)!
+        let mapImage = UIImage(systemName: "map", withConfiguration: boldConfig)!
         
         viewControllers = [
-            generateNavigationController(rootViewController: tasksViewController, title: "Задачи", image: peopleImage),
-            generateNavigationController(rootViewController: availableTasksViewController, title: "Сделать сейчас", image: conversationImage),
-            generateNavigationController(rootViewController: mapViewController, title: "Карта", image: conversationImage),
+            generateNavigationController(rootViewController: tasksViewController, title: "Задачи", image: tasksImage),
+            generateNavigationController(rootViewController: mapViewController, title: "Карта", image: mapImage),
         ]
     }
     

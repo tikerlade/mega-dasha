@@ -10,18 +10,22 @@ import Foundation
 
 class Task: Codable {
     
-    init(name: String, category: String) {
+    init(name: String, phoneNumber: Int, category: String) {
         self.name = name
         self.category = category
+        self.phone = phoneNumber
+//        self.engCategory = engCategories[categories.firstIndex(of: category)!]
     }
     
     var name = String()
     var phone = Int()
     var category = String()
+//    var engCategory = String()
     
     enum CodingKeys: String, CodingKey {
         case name = "description"
         case category = "category"
+        case phone = "phone"
     }
 }
 
