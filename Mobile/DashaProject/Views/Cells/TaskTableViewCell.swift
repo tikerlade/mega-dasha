@@ -10,6 +10,10 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
     
+    private let categories = ["Рестораны", "Кафе", "Фаст-Фуд", "Развлечения", "Достопримечательности", "Транспорт", "Аэропорт", "Проживание", "Шоппинг", "Активный Отдых", "Учреждения", "Природа", "Заправки", "Банкоматы", "Туалеты", "Больницы"]
+
+    private let engCategories = ["restaurant", "coffee-tea", "snacks-fast-food", "going-out", "sights-museums", "transport", "airport", "accommodation", "shopping", "leisure-outdoor", "administrative-areas-buildings", "natural-geographical", "petrol-station", "atm-bank-exchange", "toilet-rest-area", "hospital-health-care-facility"]
+    
     static let id = "taskCellId"
     
     let nameLabel: UILabel = {
@@ -32,10 +36,10 @@ class TaskTableViewCell: UITableViewCell {
         setupConstraints()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageView?.frame = CGRect(x: 20, y: frame.size.height / 2 - 20, width: 40, height: 40)
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        imageView?.frame = CGRect(x: 20, y: frame.size.height / 2 - 20, width: 40, height: 40)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -56,14 +60,15 @@ extension TaskTableViewCell {
     }
     
     func setupUI(with task: Task) {
-//        nameLabel.text = queue.name
-//        extraInfoLabel.text = queue.description
-//        peopleCountLabel.text = "Участники: \(queue.people.count)"
-//        
-//        let dateFormatter = DateFormatter()
-//        let dateTime = dateFormatter.getString(from: queue.startDate).split(separator: " ")
-//        dateLabel.text = "\(dateTime.first!)\n\(dateTime.last!)"
-//        
-//        imageView?.image = queue.isOwnCreated ? #imageLiteral(resourceName: "crown") : #imageLiteral(resourceName: "circle")
+        nameLabel.text = task.name
+        if categories.firstIndex(of: task.category) != nil {
+            categoryLabel.text = task.category
+        } else {
+            categoryLabel.text = categories[engCategories.firstIndex(of: task.category)!]
+        }
+        
+        if TasksViewController.phoneNumber == task.phone {
+            backgroundColor = #colorLiteral(red: 0.7993923422, green: 0.9607662749, blue: 0.9427710453, alpha: 1)
+        }
     }
 }

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B29D35624275BFB006C52C2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B29D35524275BFB006C52C2 /* GradientView.swift */; };
+		5B29D35824275C4E006C52C2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B29D35724275C4E006C52C2 /* UIView+Extension.swift */; };
+		5B29D35A242772A5006C52C2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B29D359242772A5006C52C2 /* UIViewController+Extension.swift */; };
+		5B29D35C242775CF006C52C2 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B29D35B242775CF006C52C2 /* Results.swift */; };
 		5B5427A324266C5A00B1273B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A224266C5A00B1273B /* TasksViewController.swift */; };
-		5B5427A824266D3800B1273B /* AvailableTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */; };
 		5B5427AA24266E1300B1273B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427A924266E1300B1273B /* MapViewController.swift */; };
 		5B5427AD24266F9F00B1273B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427AC24266F9F00B1273B /* Task.swift */; };
 		5B5427B02426701F00B1273B /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427AF2426701F00B1273B /* TaskTableViewCell.swift */; };
@@ -21,15 +24,38 @@
 		5B5427C22426775800B1273B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C12426775800B1273B /* UIFont+Extension.swift */; };
 		5B5427C42426780C00B1273B /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C32426780C00B1273B /* UILabel+Extension.swift */; };
 		5B5427C62426785900B1273B /* TextFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C52426785900B1273B /* TextFieldFormView.swift */; };
+		5B5427C92426A5F100B1273B /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427C82426A5F100B1273B /* AuthData.swift */; };
+		5B5427CB2426AFBE00B1273B /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427CA2426AFBE00B1273B /* CreateTaskViewController.swift */; };
+		5B5427CD2426BE6000B1273B /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5427CC2426BE6000B1273B /* TaskData.swift */; };
+		5B5427D32426C82A00B1273B /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5427D22426C82A00B1273B /* NMAKit.framework */; };
+		5B5427D42426C82A00B1273B /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5427D22426C82A00B1273B /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BB5CF922426D93700BCF313 /* ActiveTaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5CF912426D93600BCF313 /* ActiveTaskData.swift */; };
 		5BE721E924261988007B1250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721E824261988007B1250 /* AppDelegate.swift */; };
 		5BE721EB24261988007B1250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721EA24261988007B1250 /* SceneDelegate.swift */; };
 		5BE721ED24261988007B1250 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE721EC24261988007B1250 /* MainTabBarController.swift */; };
 		5BE721F224261989007B1250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE721F124261989007B1250 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5B5427D52426C82A00B1273B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5B5427D42426C82A00B1273B /* NMAKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5B29D35524275BFB006C52C2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5B29D35724275C4E006C52C2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5B29D359242772A5006C52C2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5B29D35B242775CF006C52C2 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		5B5427A224266C5A00B1273B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
-		5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTasksViewController.swift; sourceTree = "<group>"; };
 		5B5427A924266E1300B1273B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5B5427AC24266F9F00B1273B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		5B5427AF2426701F00B1273B /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -42,13 +68,18 @@
 		5B5427C12426775800B1273B /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		5B5427C32426780C00B1273B /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		5B5427C52426785900B1273B /* TextFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormView.swift; sourceTree = "<group>"; };
+		5B5427C82426A5F100B1273B /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		5B5427CA2426AFBE00B1273B /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		5B5427CC2426BE6000B1273B /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		5B5427CE2426C76800B1273B /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = "../../HERESDK-Premium/framework/NMAKit.framework"; sourceTree = "<group>"; };
+		5B5427D22426C82A00B1273B /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = framework/NMAKit.framework; sourceTree = "<group>"; };
+		5BB5CF912426D93600BCF313 /* ActiveTaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskData.swift; sourceTree = "<group>"; };
 		5BE721E524261988007B1250 /* DashaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE721E824261988007B1250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE721EA24261988007B1250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5BE721EC24261988007B1250 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5BE721F124261989007B1250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE721F624261989007B1250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BE721FD24261B8A007B1250 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = "HERESDK-Premium/framework/NMAKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5427D32426C82A00B1273B /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +100,7 @@
 				5B5427B8242674E700B1273B /* Auth */,
 				5BE721EC24261988007B1250 /* MainTabBarController.swift */,
 				5B5427A224266C5A00B1273B /* TasksViewController.swift */,
-				5B5427A724266D3800B1273B /* AvailableTasksViewController.swift */,
+				5B5427CA2426AFBE00B1273B /* CreateTaskViewController.swift */,
 				5B5427A924266E1300B1273B /* MapViewController.swift */,
 			);
 			path = Controllers;
@@ -95,7 +127,11 @@
 		5B5427AB24266F9200B1273B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BB5CF912426D93600BCF313 /* ActiveTaskData.swift */,
+				5B5427C82426A5F100B1273B /* AuthData.swift */,
 				5B5427AC24266F9F00B1273B /* Task.swift */,
+				5B5427CC2426BE6000B1273B /* TaskData.swift */,
+				5B29D35B242775CF006C52C2 /* Results.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +142,7 @@
 				5B5427C72426786400B1273B /* Cells */,
 				5B5427BB2426756A00B1273B /* OneLineTextField.swift */,
 				5B5427C52426785900B1273B /* TextFieldFormView.swift */,
+				5B29D35524275BFB006C52C2 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +155,8 @@
 				5B5427C12426775800B1273B /* UIFont+Extension.swift */,
 				5B5427C32426780C00B1273B /* UILabel+Extension.swift */,
 				5B5427B22426710800B1273B /* UIStackView+Extension.swift */,
+				5B29D35724275C4E006C52C2 /* UIView+Extension.swift */,
+				5B29D359242772A5006C52C2 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,7 +219,8 @@
 		5BE721FC24261B8A007B1250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BE721FD24261B8A007B1250 /* NMAKit.framework */,
+				5B5427D22426C82A00B1273B /* NMAKit.framework */,
+				5B5427CE2426C76800B1273B /* NMAKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +235,7 @@
 				5BE721E124261988007B1250 /* Sources */,
 				5BE721E224261988007B1250 /* Frameworks */,
 				5BE721E324261988007B1250 /* Resources */,
+				5B5427D52426C82A00B1273B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,19 +295,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B29D35824275C4E006C52C2 /* UIView+Extension.swift in Sources */,
 				5B5427BC2426756A00B1273B /* OneLineTextField.swift in Sources */,
+				5B5427CB2426AFBE00B1273B /* CreateTaskViewController.swift in Sources */,
 				5B5427BA242674FB00B1273B /* AuthViewController.swift in Sources */,
 				5B5427C62426785900B1273B /* TextFieldFormView.swift in Sources */,
 				5B5427B02426701F00B1273B /* TaskTableViewCell.swift in Sources */,
 				5B5427C22426775800B1273B /* UIFont+Extension.swift in Sources */,
-				5B5427A824266D3800B1273B /* AvailableTasksViewController.swift in Sources */,
+				5B29D35A242772A5006C52C2 /* UIViewController+Extension.swift in Sources */,
+				5B29D35C242775CF006C52C2 /* Results.swift in Sources */,
 				5B5427B7242673E900B1273B /* NetworkManager.swift in Sources */,
+				5BB5CF922426D93700BCF313 /* ActiveTaskData.swift in Sources */,
 				5B5427AA24266E1300B1273B /* MapViewController.swift in Sources */,
 				5BE721ED24261988007B1250 /* MainTabBarController.swift in Sources */,
 				5B5427C42426780C00B1273B /* UILabel+Extension.swift in Sources */,
+				5B29D35624275BFB006C52C2 /* GradientView.swift in Sources */,
 				5B5427A324266C5A00B1273B /* TasksViewController.swift in Sources */,
 				5B5427B32426710800B1273B /* UIStackView+Extension.swift in Sources */,
 				5BE721E924261988007B1250 /* AppDelegate.swift in Sources */,
+				5B5427CD2426BE6000B1273B /* TaskData.swift in Sources */,
+				5B5427C92426A5F100B1273B /* AuthData.swift in Sources */,
 				5B5427BE2426758300B1273B /* UIColor+Extension.swift in Sources */,
 				5B5427AD24266F9F00B1273B /* Task.swift in Sources */,
 				5BE721EB24261988007B1250 /* SceneDelegate.swift in Sources */,
@@ -401,8 +449,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DashaProject/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,8 +474,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/framework",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DashaProject/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
