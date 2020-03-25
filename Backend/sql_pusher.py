@@ -13,24 +13,35 @@ problems_create_query = '''CREATE TABLE IF NOT EXISTS problems
 cursor.execute(problems_create_query)
 
 
-phone = 89516827825
+phone = 777
 description = '[RedVerg RD5461C-120A, RedVerg RD5461C-130A, RedVerg RD5461C-150A, RedVerg RD5461C-160B, пластик, 1 шт]'
 category = 'shopping'
 query = '''INSERT INTO problems VALUES (?, ?, ?)'''
 
-for i in range(10):
-    params = [phone, description, category]
-    print(params)
-    cursor.execute(query, params)
-    phone += 1
+
+params = [phone, description, category]
+print(params)
+cursor.execute(query, params)
 connection.commit()
 
-for i in range(10):
-    params = [phone, description, 'goinig-out']
-    print(params)
-    cursor.execute(query, params)
-    phone += 1
+
+params = [phone, description, 'mall']
+print(params)
+cursor.execute(query, params)
 connection.commit()
+# for i in range(10):
+#     params = [phone, description, category]
+#     print(params)
+#     cursor.execute(query, params)
+#     phone += 1
+# connection.commit()
+
+# for i in range(10):
+#     params = [phone, description, 'goinig-out']
+#     print(params)
+#     cursor.execute(query, params)
+#     phone += 1
+# connection.commit()
 
 
 

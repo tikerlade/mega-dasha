@@ -11,3 +11,4 @@
 ![](https://b.radikal.ru/b01/2003/b9/1a807f13737c.png)
 ***Display tasks on the map***
 ![](https://d.radikal.ru/d11/2003/b2/92de4baaedca.png)
+
