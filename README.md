@@ -10,4 +10,4 @@
 ***Create your own task***
 ![](https://b.radikal.ru/b01/2003/b9/1a807f13737c.png)
 ***Display tasks on the map***
-![](https://b.radikal.ru/b39/2003/42/19bae43c7703.png)
+![](https://d.radikal.ru/d11/2003/b2/92de4baaedca.png)
